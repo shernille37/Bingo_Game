@@ -48,8 +48,5 @@ const displayNumbers = () => {
 document.addEventListener('DOMContentLoaded', displayNumbers());
 
 bingoContent.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('free')) {
-    e.target.style.backgroundColor = '#dd382f';
-    e.target.style.color = '#fff';
-  }
+  if (!e.target.classList.contains('free')) e.target.classList.toggle('active');
 });

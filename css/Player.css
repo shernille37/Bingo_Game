@@ -45,6 +45,11 @@ body {
   color: #fff;
 }
 
+.active {
+  background-color: #dd382f;
+  color: #fff;
+}
+
 .bingo-header,
 .bingo-content {
   display: grid;
