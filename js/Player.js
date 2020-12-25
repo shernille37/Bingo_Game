@@ -43,6 +43,7 @@ const displayNumbers = () => {
   });
 
   document.querySelector('.free').innerHTML = 'Free';
+  document.querySelectorAll('.free').style.backgroundColor = '#dd382f';
 };
 
 document.addEventListener('DOMContentLoaded', displayNumbers());
