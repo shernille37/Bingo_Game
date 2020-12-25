@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #9c0ee4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bingo-card {
+  background-color: #f4fe6f;
+}
+
+.bingo-header div {
+  color: #fff;
+  font-size: 45px;
+}
+
+.bingo-content div {
+  font-size: 35px;
+}
+
+.bingo-header div,
+.bingo-content div {
+  height: 70px;
+  width: 80px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bingo-content div:not(.free) {
+  cursor: pointer;
+}
+
+.bingo-header,
+.bingo-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.bingo-header div:nth-child(1) {
+  background-color: #fb2128;
+}
+
+.bingo-header div:nth-child(2) {
+  background-color: #d3920e;
+}
+.bingo-header div:nth-child(3) {
+  background-color: #00a127;
+}
+.bingo-header div:nth-child(4) {
+  background-color: #0063e5;
+}
+.bingo-header div:nth-child(5) {
+  background-color: #d92d91;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4fe6f;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 5px;
+}
