@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #9c0ee4;
   display: flex;
   justify-content: center;
@@ -40,11 +40,6 @@ body {
   cursor: pointer;
 }
 
-.free {
-  background-color: #dd382f;
-  color: #fff;
-}
-
 .active {
   background-color: #dd382f;
   color: #fff;
@@ -73,6 +68,57 @@ body {
   background-color: #d92d91;
 }
 
+.bingo-title {
+  font-size: 70px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  background-color: #f4fe6f;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #000;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  text-shadow: #000 5px 5px 5px;
+  display: none;
+}
+
+.bingo-title span:nth-child(1) {
+  color: #fb2128;
+}
+.bingo-title span:nth-child(2) {
+  color: #d3920e;
+}
+.bingo-title span:nth-child(3) {
+  color: #00a127;
+}
+.bingo-title span:nth-child(4) {
+  color: #0063e5;
+}
+.bingo-title span:nth-child(5) {
+  color: #d92d91;
+}
+
+.back {
+  padding: 20px;
+  width: 200px;
+  margin: 50px 0;
+  background-color: #fb2128;
+  border: 1px solid #000;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  letter-spacing: 5px;
+  box-shadow: #000 5px 5px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.win button:hover {
+  background-color: #f4fe6f;
+  color: #000;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -82,4 +128,18 @@ footer {
   text-align: center;
   padding: 10px;
   letter-spacing: 5px;
+}
+
+@media (max-width: 850px) {
+  body {
+    flex-direction: column;
+  }
+
+  .bingo-card {
+    margin: 20px 0;
+  }
+
+  .bingo-title {
+    margin: 50px 0;
+  }
 }

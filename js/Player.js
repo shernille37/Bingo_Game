@@ -1,4 +1,6 @@
 const bingoContent = document.querySelector('.bingo-content');
+const bingoTitle = document.querySelector('.bingo-title');
+const backBtn = document.querySelector('.win .back');
 
 const b = document.querySelectorAll('.b');
 const i = document.querySelectorAll('.i');
@@ -45,8 +47,128 @@ const displayNumbers = () => {
   document.querySelector('.free').innerHTML = 'Free';
 };
 
+const verifyWin = () => {
+  const dia1 = [b[0], i[1], n[2], g[3], o[4]];
+  const dia2 = [o[0], g[1], n[2], i[3], b[4]];
+
+  const x1 = [b[0], i[0], n[0], g[0], o[0]];
+  const x2 = [b[1], i[1], n[1], g[1], o[1]];
+  const x3 = [b[2], i[2], n[2], g[2], o[2]];
+  const x4 = [b[3], i[3], n[3], g[3], o[3]];
+  const x5 = [b[4], i[4], n[4], g[4], o[4]];
+
+  cnt = 0;
+
+  // ----- VERTICAL -----
+
+  b.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  i.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  n.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  g.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  o.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  // -----DIAGONAL-----
+
+  dia1.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  dia2.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  // Horizontal
+
+  x1.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  x2.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  x3.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  x4.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+
+  x5.forEach((div) => {
+    if (div.classList.contains('active')) cnt++;
+  });
+
+  if (cnt === 5) return true;
+  cnt = 0;
+};
+
 document.addEventListener('DOMContentLoaded', displayNumbers());
 
 bingoContent.addEventListener('click', (e) => {
   if (!e.target.classList.contains('free')) e.target.classList.toggle('active');
+
+  if (verifyWin()) {
+    const body = document.querySelector('body');
+    backBtn.style.display = 'block';
+    bingoTitle.style.display = 'block';
+    body.style.justifyContent = 'space-around';
+
+    bingoContent.style.pointerEvents = 'none';
+  }
+});
+
+backBtn.addEventListener('click', (e) => {
+  const body = document.querySelector('body');
+  backBtn.style.display = 'none';
+  bingoTitle.style.display = 'none';
+  body.style.justifyContent = 'center';
+  bingoContent.style.pointerEvents = 'all';
 });
