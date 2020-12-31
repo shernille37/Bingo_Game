@@ -70,7 +70,7 @@ body {
 
 .bingo-title {
   font-size: 50px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact;
   letter-spacing: 10px;
   text-transform: uppercase;
   background-color: #f4fe6f;
@@ -106,7 +106,7 @@ body {
   background-color: #fb2128;
   border: 1px solid #000;
   color: #fff;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact;
   font-size: 30px;
   letter-spacing: 5px;
   box-shadow: #000 5px 5px 5px;
