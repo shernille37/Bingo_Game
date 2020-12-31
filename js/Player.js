@@ -44,19 +44,22 @@ const displayNumbers = () => {
     divIndex++;
   });
 
-  document.querySelector('.free').innerHTML = 'Free';
+  n[2].innerHTML = 'Free';
 };
 
 const verifyWin = () => {
+  // Diagonals
   const dia1 = [b[0], i[1], n[2], g[3], o[4]];
   const dia2 = [o[0], g[1], n[2], i[3], b[4]];
 
+  // Horizontals
   const x1 = [b[0], i[0], n[0], g[0], o[0]];
   const x2 = [b[1], i[1], n[1], g[1], o[1]];
   const x3 = [b[2], i[2], n[2], g[2], o[2]];
   const x4 = [b[3], i[3], n[3], g[3], o[3]];
   const x5 = [b[4], i[4], n[4], g[4], o[4]];
 
+  // Counter
   cnt = 0;
 
   // ----- VERTICAL -----
