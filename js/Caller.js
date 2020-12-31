@@ -4,6 +4,10 @@ const calledNumbers = document.querySelector('.calledNumbers');
 
 const arr = [];
 
+window.onbeforeunload = () => {
+  return 'Are you sure?';
+};
+
 const fillArray = () => {
   for (let i = 1; i <= 75; i++) arr.push(i);
 };

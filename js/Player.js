@@ -10,6 +10,10 @@ const o = document.querySelectorAll('.o');
 
 let numbers = [];
 
+window.onbeforeunload = () => {
+  return 'Are you sure?';
+};
+
 const generateNumbers = () => {
   while (1) {
     for (let ind = 0; ind < 25; ind++) {
