@@ -34,7 +34,7 @@ body {
 }
 
 .bingo-title {
-  font-size: 70px;
+  font-size: 50px;
   font-family: Impact;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ footer {
 
   .calledNumbers {
     position: static;
-    margin: 50px 0;
+    margin: 100px 0;
   }
 }
 
