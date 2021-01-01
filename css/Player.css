@@ -15,6 +15,7 @@ body {
 
 .bingo-card {
   background-color: #f4fe6f;
+  perspective: 1000px;
 }
 
 .bingo-header div {
@@ -24,6 +25,13 @@ body {
 
 .bingo-content div {
   font-size: 35px;
+  transition: all 0.3s ease-out;
+  transform-style: preserve-3d;
+}
+
+.bingo-content div:hover {
+  transform: translateZ(100px);
+  border: 3px solid black;
 }
 
 .bingo-header div,
